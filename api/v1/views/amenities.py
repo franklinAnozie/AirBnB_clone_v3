@@ -30,9 +30,9 @@ def get_amenity_with_id(amenity_id):
 
 @app_views.route('/amenities/<amenities_id>',
                  methods=["DELETE"], strict_slashes=False)
-def amenities_delete(amenity_id):
+def amenities_delete(amenities_id):
     """ deletes an amenity """
-    amenity = storage.get(Amenity, amenity_id)
+    amenity = storage.get(Amenity, amenities_id)
 
     if not amenity:
         abort(404)
