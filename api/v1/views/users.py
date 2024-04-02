@@ -28,9 +28,9 @@ def get_user_with_id(user_id):
 
 
 @app_views.route('/users/<users_id>', methods=["DELETE"], strict_slashes=False)
-def users_delete(user_id):
+def users_delete(users_id):
     """ deletes a user """
-    user = storage.get(User, user_id)
+    user = storage.get(User, users_id)
 
     if not user:
         abort(404)
